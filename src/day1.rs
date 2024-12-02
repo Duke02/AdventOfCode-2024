@@ -18,7 +18,7 @@ pub fn main() {
     if let Ok(lines) = read_lines(&path) {
         let both_lr: Vec<(i64, i64)> = lines.flatten().map(|line| {line.split_whitespace().map(|n| { match n.parse::<i64>() {
             Ok(num) => num,
-            Err(e) => panic!("cannot parse integer. ERror is {e}"),
+            Err(e) => panic!("Cannot parse integer. Error is {e}"),
         }}).collect()}).map(|v: Vec<i64>| (v[0], v[1])).collect();
         let mut left_list: Vec<i64> = both_lr.iter().map(|(l, _)| *l).collect(); 
         let mut right_list: Vec<i64> = both_lr.iter().map(|(_, r)| *r).collect();
