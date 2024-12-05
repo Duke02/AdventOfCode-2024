@@ -8,10 +8,6 @@ pub fn main() {
 
     let re = Regex::new(r"mul\((?P<one>\d+),(?P<two>\d+)\)").unwrap();
 
-    // let dates: Vec<(&str, &str, &str)> = re.captures_iter(hay).map(|caps| {
-    //     let (_, [year, month, day]) = caps.extract();
-    //     (year, month, day)
-    // }).collect();
     let total = re
         .captures_iter(&haystack)
         .map(|c| c.extract().1)
