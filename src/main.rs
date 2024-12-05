@@ -1,6 +1,6 @@
-mod day2a;
 mod utils;
+mod day4;
 
 fn main() {
-    day2a::main();
+    day4::main();
 }
